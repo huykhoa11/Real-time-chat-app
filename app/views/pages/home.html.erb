@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-	<div class="container">
+
 		<br><br>
 		<h1>My app</h1>
 		<%= link_to "Edit profile", edit_user_registration_path, class: "button is-primary is-outlined" %>
@@ -24,15 +24,15 @@
             <% end %>
 		</div>
 
-	</div>
+
 
 <% else %>
-	<div class="container">
+
 		<br><br><br>
 		<%= link_to "Sign Up", new_user_registration_path, class: "button is-primary" %>
 		&nbsp;&nbsp;
 		<%= link_to "Log in", new_user_session_path, class: "button is-light" %>
-	</div>
+
 <% end %>
 
 
