@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Real time chat app
 
-Things you may want to cover:
+Rails version: 6.1<br>
+Ruby version: 2.7
 
-* Ruby version
+# Preview
+![image](https://user-images.githubusercontent.com/69473375/157669868-a66535fb-f9ce-42d2-8dfb-aed0011ec9e8.png)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
