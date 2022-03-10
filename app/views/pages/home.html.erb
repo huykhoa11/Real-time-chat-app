@@ -1,0 +1,38 @@
+<% if user_signed_in? %>
+	<div class="container">
+		<br><br>
+		<h1>My app</h1>
+		<%= link_to "Edit profile", edit_user_registration_path, class: "button is-primary is-outlined" %>
+	    &nbsp;&nbsp;
+	    <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "button is-link is-outlined" %>
+	
+
+		<br><br>
+		<h1 style="color: crimson;">Chat box</h1>
+		<div class="well" id="chatbox">
+			<% @messages.each do |message| %>
+              <%= render "messages/message", message: message, remote:true %><br>
+          	<% end %>
+		</div>
+
+		<div class="input-group mb-3">
+		  <%= form_with model: @message, local: false do |f| %>
+            <div class="input-group mb-3">
+              <%= f.text_field :body, class: "form-control", placeholder: "Say something..." %>
+              <%= f.submit 'Send', class: "btn btn-outline-secondary" %>
+              </div>
+            <% end %>
+		</div>
+
+	</div>
+
+<% else %>
+	<div class="container">
+		<br><br><br>
+		<%= link_to "Sign Up", new_user_registration_path, class: "button is-primary" %>
+		&nbsp;&nbsp;
+		<%= link_to "Log in", new_user_session_path, class: "button is-light" %>
+	</div>
+<% end %>
+
+
