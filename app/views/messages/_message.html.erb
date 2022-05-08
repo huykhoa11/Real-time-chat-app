@@ -2,4 +2,6 @@
 
 <strong>[<%= message.created_at.strftime("%I:%M %p") %>] <%= str[0] %>:</strong> 
 <%= message.body %>&nbsp;&nbsp;&nbsp;&nbsp;
-<%= link_to image_tag("cancel.png"), message, method: :delete, remote: true %>
+<% if current_user == message.user %>
+	<%= link_to image_tag("cancel.png"), message, method: :delete, remote: true %>
+<% end %>
